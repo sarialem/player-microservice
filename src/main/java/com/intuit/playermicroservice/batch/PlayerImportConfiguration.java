@@ -1,6 +1,6 @@
 package com.intuit.playermicroservice.batch;
 
-import com.intuit.playermicroservice.entity.Player;
+import com.intuit.playermicroservice.model.entity.Player;
 import com.intuit.playermicroservice.repository.PlayerRepository;
 import org.springframework.batch.core.Job;
 import org.springframework.batch.core.Step;

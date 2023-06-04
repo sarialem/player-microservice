@@ -1,8 +1,7 @@
-package com.intuit.playermicroservice.domain.dtos;
+package com.intuit.playermicroservice.model.dtos;
 
-import com.intuit.playermicroservice.entity.Player;
-import jakarta.persistence.Temporal;
-import jakarta.persistence.TemporalType;
+import com.intuit.playermicroservice.model.entity.Player;
+import com.intuit.playermicroservice.model.Hand;
 
 import java.util.Date;
 import java.util.Objects;

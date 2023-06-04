@@ -1,6 +1,6 @@
 package com.intuit.playermicroservice.batch;
 
-import com.intuit.playermicroservice.entity.Player;
+import com.intuit.playermicroservice.model.entity.Player;
 import org.springframework.batch.item.ItemProcessor;
 
 public class PlayerItemProcessor implements ItemProcessor<Player, Player> {

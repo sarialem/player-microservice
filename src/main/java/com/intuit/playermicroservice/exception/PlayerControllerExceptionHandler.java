@@ -2,7 +2,7 @@ package com.intuit.playermicroservice.exception;
 
 import java.time.ZonedDateTime;
 
-import com.intuit.playermicroservice.domain.dtos.PlayerErrorResponse;
+import com.intuit.playermicroservice.model.PlayerErrorResponse;
 import jakarta.servlet.http.HttpServletRequest;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;

@@ -1,6 +1,6 @@
 package com.intuit.playermicroservice.controller;
 
-import com.intuit.playermicroservice.domain.dtos.PlayerDto;
+import com.intuit.playermicroservice.model.dtos.PlayerDto;
 import com.intuit.playermicroservice.service.PlayerService;
 import org.springdoc.core.annotations.ParameterObject;
 import org.springframework.data.domain.Page;

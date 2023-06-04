@@ -1,6 +1,6 @@
-package com.intuit.playermicroservice.entity;
+package com.intuit.playermicroservice.model.entity;
 
-import com.intuit.playermicroservice.domain.dtos.Hand;
+import com.intuit.playermicroservice.model.Hand;
 import jakarta.persistence.*;
 
 import java.util.Date;

@@ -1,7 +1,7 @@
 package com.intuit.playermicroservice;
 
-import com.intuit.playermicroservice.domain.dtos.PlayerDto;
-import com.intuit.playermicroservice.entity.Player;
+import com.intuit.playermicroservice.model.dtos.PlayerDto;
+import com.intuit.playermicroservice.model.entity.Player;
 import com.intuit.playermicroservice.exception.PlayerNotFoundException;
 import com.intuit.playermicroservice.repository.PlayerRepository;
 import com.intuit.playermicroservice.service.PlayerService;

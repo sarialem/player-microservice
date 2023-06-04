@@ -1,4 +1,4 @@
-package com.intuit.playermicroservice.domain.dtos;
+package com.intuit.playermicroservice.model;
 
 import java.time.ZonedDateTime;
 

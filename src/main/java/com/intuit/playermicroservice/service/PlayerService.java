@@ -1,18 +1,15 @@
 package com.intuit.playermicroservice.service;
 
-import com.intuit.playermicroservice.domain.dtos.PlayerDto;
-import com.intuit.playermicroservice.entity.Player;
+import com.intuit.playermicroservice.model.dtos.PlayerDto;
+import com.intuit.playermicroservice.model.entity.Player;
 import com.intuit.playermicroservice.exception.PlayerNotFoundException;
 import com.intuit.playermicroservice.repository.PlayerRepository;
 import jakarta.validation.constraints.NotEmpty;
 import jakarta.validation.constraints.NotNull;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
-import org.springframework.validation.annotation.Validated;
 
-import javax.swing.text.html.Option;
 import java.util.Optional;
 
 @Service
