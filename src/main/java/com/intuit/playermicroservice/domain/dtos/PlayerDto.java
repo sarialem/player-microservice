@@ -5,6 +5,7 @@ import jakarta.persistence.Temporal;
 import jakarta.persistence.TemporalType;
 
 import java.util.Date;
+import java.util.Objects;
 
 public class PlayerDto {
 
@@ -325,5 +326,18 @@ public class PlayerDto {
 
     public void setBbrefID(String bbrefID) {
         this.bbrefID = bbrefID;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        PlayerDto playerDto = (PlayerDto) o;
+        return Objects.equals(id, playerDto.id);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(id);
     }
 }

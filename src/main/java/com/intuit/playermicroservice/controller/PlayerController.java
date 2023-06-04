@@ -11,8 +11,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 
-@RequestMapping("/api/v1/players")
 @RestController()
+@RequestMapping(value="/api/v1/players",  produces ="application/json")
 public class PlayerController {
 
     PlayerService playerService;
@@ -21,7 +21,7 @@ public class PlayerController {
         this.playerService = playerService;
     }
 
-    @GetMapping("")
+    @GetMapping()
     public Page<PlayerDto> getAllPlayers(@ParameterObject Pageable pageable) {
         return playerService.getAllPlayers(pageable);
     }

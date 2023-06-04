@@ -21,6 +21,12 @@ dependencies {
 	runtimeOnly 'com.h2database:h2'
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
 	testImplementation 'org.springframework.batch:spring-batch-test'
+	testImplementation 'org.hamcrest:hamcrest-junit:2.0.0.0'
+
+}
+
+jar {
+	enabled = false
 }
 
 tasks.named('test') {

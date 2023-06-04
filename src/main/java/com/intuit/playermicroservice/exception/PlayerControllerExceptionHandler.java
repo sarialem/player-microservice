@@ -23,4 +23,16 @@ public class PlayerControllerExceptionHandler {
 
         return new ResponseEntity<> (error, HttpStatus.NOT_FOUND);
     }
+
+    @ExceptionHandler
+    public ResponseEntity<PlayerErrorResponse> generalExceptionHandler1(Exception ex, HttpServletRequest req){
+
+        PlayerErrorResponse error = new PlayerErrorResponse(
+                ZonedDateTime.now(),
+                HttpStatus.INTERNAL_SERVER_ERROR.value(),
+                req.getRequestURI(),
+                ex.getMessage());
+
+        return new ResponseEntity<> (error, HttpStatus.INTERNAL_SERVER_ERROR);
+    }
 }

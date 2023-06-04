@@ -61,6 +61,10 @@ public class Player {
     public Player() {
     }
 
+    public Player(String id) {
+        this.id = id;
+    }
+
     public Player(String id, Integer birthYear, Short birthMonth, Short birthDay, String birthCountry, String birthState, String birthCity, Integer deathYear, Short deathMonth, Short deathDay, String deathCountry, String deathState, String deathCity, String nameFirst, String nameLast, String nameGiven, Double weight, Double height, Hand battingHand, Hand throwingHand, Date debut, Date finalGame, String retroID, String bbrefID) {
         this.id = id;
         this.birthYear = birthYear;
