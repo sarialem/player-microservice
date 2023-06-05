@@ -32,7 +32,7 @@ public class PlayerImportConfiguration {
     @Bean
     public FlatFileItemReader<Player> reader() {
         return new FlatFileItemReaderBuilder<Player>()
-                .name("personItemReader")
+                .name("playerItemReader")
                 .resource(new ClassPathResource("static/Player.csv"))
                 .delimited()
                 .names(new String[]{"id", "birthYear","birthMonth","birthDay","birthCountry","birthState","birthCity","deathYear","deathMonth","deathDay","deathCountry","deathState","deathCity","nameFirst","nameLast","nameGiven","weight","height","battingHand","throwingHand","debut","finalGame","retroID","bbrefID"})
@@ -47,11 +47,6 @@ public class PlayerImportConfiguration {
     }
 
     @Bean
-    public PlayerItemProcessor processor() {
-        return new PlayerItemProcessor();
-    }
-
-    @Bean
     public RepositoryItemWriter<Player> writer() {
         RepositoryItemWriter<Player> writer = new RepositoryItemWriter<>();
         writer.setRepository(playerRepository);
@@ -61,9 +56,9 @@ public class PlayerImportConfiguration {
 
 
     @Bean
-    public Job importUserJob(JobRepository jobRepository,
+    public Job importPlayersJob(JobRepository jobRepository,
                              JobCompletionNotificationListener listener, Step step1) {
-        return new JobBuilder("importUserJob", jobRepository)
+        return new JobBuilder("importPlayersJob", jobRepository)
                 .incrementer(new RunIdIncrementer())
                 .listener(listener)
                 .flow(step1)
@@ -77,7 +72,6 @@ public class PlayerImportConfiguration {
         return new StepBuilder("step1", jobRepository)
                 .<Player, Player> chunk(100, transactionManager)
                 .reader(reader())
-                .processor(processor())
                 .writer(writer)
                 .build();
     }

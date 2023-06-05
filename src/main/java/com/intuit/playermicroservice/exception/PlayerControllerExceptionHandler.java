@@ -25,7 +25,7 @@ public class PlayerControllerExceptionHandler {
     }
 
     @ExceptionHandler
-    public ResponseEntity<PlayerErrorResponse> generalExceptionHandler1(Exception ex, HttpServletRequest req){
+    public ResponseEntity<PlayerErrorResponse> generalExceptionHandler(Exception ex, HttpServletRequest req){
 
         PlayerErrorResponse error = new PlayerErrorResponse(
                 ZonedDateTime.now(),

@@ -14,12 +14,8 @@ public class JobCompletionNotificationListener implements JobExecutionListener {
 
     private static final Logger log = LoggerFactory.getLogger(JobCompletionNotificationListener.class);
 
-    private final JdbcTemplate jdbcTemplate;
 
-    @Autowired
-    public JobCompletionNotificationListener(JdbcTemplate jdbcTemplate) {
-        this.jdbcTemplate = jdbcTemplate;
-    }
+    public JobCompletionNotificationListener() { }
 
     @Override
     public void afterJob(JobExecution jobExecution) {

@@ -30,15 +30,15 @@ public class PlayerService {
 
     public PlayerDto getPlayerById(@NotEmpty String id) {
 
-        if(id == null || id.isEmpty()){
+        if(id == null || id.isEmpty()) {
             throw new IllegalArgumentException("id argument should not be empty");
         }
 
         Optional<Player> result = playerRepository.findById(id);
-
         if(result.isEmpty()) {
             throw new PlayerNotFoundException(id);
         }
+
         return new PlayerDto(result.get());
     }
 
